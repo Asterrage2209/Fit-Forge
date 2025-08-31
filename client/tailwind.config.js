@@ -1,21 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
-      keyframes: {
-        'fade-in': {
-          '0%': { opacity: '0', transform: 'translateY(-10px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+      colors: {
+        'brand': {
+          'light': '#a7f3d0',     // Light Bluish-Green (emerald-200)
+          'light-alt': '#6ee7b7', // A slightly darker shade (emerald-300) - NEW
+          'DEFAULT': '#14b8a6',   // Default Bluish-Green (teal-500)
+          'dark': '#115e59',      // Darkish Green (teal-900)
+          'dark-alt': '#1e293b'    // A slightly lighter shade for dark mode UI (teal-800) - NEW
         },
       },
-      animation: {
-        'fade-in': 'fade-in 0.5s ease-out',
-      }
     },
   },
   plugins: [],

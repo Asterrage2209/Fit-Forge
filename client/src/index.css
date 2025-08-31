@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: theme('colors.brand.light');
+  --ui-background: theme('colors.brand.light-alt'); /* NEW: For navbar, footer, cards */
+  --foreground: theme('colors.brand.dark');
+  --primary: theme('colors.brand.DEFAULT');
+}
+
+.dark {
+  --background: theme('colors.brand.dark');
+  --ui-background: theme('colors.brand.dark-alt'); /* NEW: For navbar, footer, cards */
+  --foreground: theme('colors.brand.light');
+  --primary: theme('colors.brand.DEFAULT');
+}
+
 body {
-    @apply bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200 transition-colors duration-300;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
